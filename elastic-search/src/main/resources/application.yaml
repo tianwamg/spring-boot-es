@@ -1,0 +1,16 @@
+
+server:
+  port: 10086
+spring:
+  application:
+    name: elastic-search
+
+#elasticsearch
+elasticsearch:
+  schema: http
+  address: 127.0.0.1:9200
+  connectTimeout: 5000
+  socketTimeout: 5000
+  connectionRequestTimeout: 5000
+  maxConnectNum: 100
+  maxConnectPerRoute: 100
