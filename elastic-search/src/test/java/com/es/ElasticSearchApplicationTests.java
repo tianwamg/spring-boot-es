@@ -1,13 +1,38 @@
 package com.es;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.es.service.DocService;
+import com.es.service.IndexService;
 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class ElasticSearchApplicationTests {
+public class ElasticSearchApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void contextLoads() {
+        System.out.println(123);
+    }
+
+    @Autowired
+    IndexService indexService;
+
+    @Test
+    public void indexTest(){
+        indexService.createIndex();
+    }
+
+    @Autowired
+    DocService docService;
+
+    @Test
+    public void docTest(){
+        //docService.addDocument();
+        docService.geDocument();
     }
 
 }

@@ -4,5 +4,5 @@ public class Constant {
 
     public static final String INDEX = "mydlq-user";
 
-    public static final String Doc = "doc";
+    public static final String Doc = "_doc";
 }

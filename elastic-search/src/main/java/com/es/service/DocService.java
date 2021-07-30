@@ -34,6 +34,7 @@ public class DocService {
     public void addDocument(){
         try {
             IndexRequest indexRequest = new IndexRequest(Constant.INDEX, Constant.Doc, "1");
+            //IndexRequest indexRequest = new IndexRequest(Constant.INDEX);
             UserInfo userInfo = UserInfo.builder()
                     .name("张三")
                     .age(29)

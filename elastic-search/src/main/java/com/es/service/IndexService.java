@@ -30,7 +30,7 @@ public class IndexService {
         try {
             XContentBuilder mapping = XContentFactory.jsonBuilder()
                     .startObject()
-                    .field("dynamic",true)
+                    .field("dynamic", true)
                     .startObject("properties")
                     .startObject("name")
                     .field("type","text")
@@ -78,7 +78,7 @@ public class IndexService {
                     .build();
             //新建创建索引请求对象，然后设置索引类型（7不存在）和mapping与index配置
             CreateIndexRequest request = new CreateIndexRequest(Constant.INDEX,settings);
-            request.mapping("doc",mapping);
+            //request.mapping("doc",mapping);
             //RestHighLevelClient执行创建索引
             CreateIndexResponse response = restHighLevelClient.indices().create(request, RequestOptions.DEFAULT);
             //判断是否创建成功
