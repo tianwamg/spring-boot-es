@@ -4,6 +4,17 @@
 - boot-dubbo-rpc jsonrpc基础服务
 - elastic-search 基础es服务demo
 
+```
+jsonrpc请求方式post
+http://127.0.0.1:10082/dubbo-rpc/com.es.api.facade.HelloService
+{
+    "method":"hello",
+    "id":1,
+    "jsonrpc":"2.0",
+    "param":[]
+}
+```
+
 #### 参考：
 [jsonrpc](https://jianshu.com/p/82e022a39aee)
 
